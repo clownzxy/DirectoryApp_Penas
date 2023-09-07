@@ -196,11 +196,12 @@
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
                     <Picker
-                        x:Name="picker"
-                        SelectedIndexChanged="Picker_SelectedIndexChanged"
-                        Visual="Default" />
+                        ItemDisplayBinding="{Binding schoolProgram}"
+                        ItemsSource="{Binding SchoolProgram}"
+                        SelectedIndexChanged="OnPickerSelectedIndexChanged" />
                 </Border>
 
+                <Label x:Name="labelname" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -212,8 +213,11 @@
                     Stroke="Black"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Picker x:Name="coursePicker" />
+                    <Picker />
+
+
                 </Border>
+
 
             </HorizontalStackLayout>
 
